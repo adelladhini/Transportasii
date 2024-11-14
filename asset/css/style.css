@@ -790,8 +790,65 @@ h2 {
 }
 
 
+
+/* Tambahkan media query untuk tampilan mobile */
+@media (max-width: 500px) {
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 px;
+    }
+    
+    .header-img {
+        width: 100vw; /* Lebar penuh layar */
+        height: 300px;
+        background-color: lightgray; /* Warna latar sementara */
+        background-image: url('asset/images/backgroundd.jpg'); /* Gambar latar */
+        background-size: cover; /* Menutupi seluruh area */
+        background-position: center; /* Posisi tengah gambar */
+        margin: 0;
+        padding: 0;
+        position: relative; /* Atur sebagai posisi relatif */
+        z-index: 1; /* Mengirim elemen ke latar belakang */
+    }
+
+    .navbar {
+        flex-direction: column; /* Ubah navbar ke arah vertikal */
+        align-items: flex-start;
+    }
+
+    ul.menu-horizontal {
+        display: none; /* Sembunyikan menu default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff; /* Warna background menu */
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    ul.menu-horizontal li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: auto;
+        color: #000;
+    }
+
+    /* Tampilkan menu saat dropdown aktif */
+    .navbar.active ul.menu-horizontal {
+        display: flex;
+    }
+}
+
 /* Responsive styling untuk tampilan mobile */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     table {
         width: 100%;
         font-size: 12px; /* Sesuaikan ukuran font agar lebih kecil */
@@ -807,8 +864,9 @@ h2 {
     }
 }
 
+
 /* Responsive styling untuk mobile */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -845,8 +903,19 @@ h2 {
     }
 }
 
+
 /* Responsive styling untuk tampilan mobile */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+
+    .footer {
+        background-color: #ffffff;
+        padding: 0; /* Sesuaikan padding sesuai kebutuhan */
+        color: #333;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        margin: 0;
+        flex-shrink: 0; /* Jangan biarkan footer mengecil */
+    }
 
 .footer-container {
     display: flex;
@@ -1004,41 +1073,4 @@ h2 {
     margin-top: auto; /* Memastikan footer selalu di bawah */
     position: relative;
 }
-}
-
-/* Tambahkan media query untuk tampilan mobile */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Ubah navbar ke arah vertikal */
-        align-items: flex-start;
-    }
-
-    ul.menu-horizontal {
-        display: none; /* Sembunyikan menu default */
-        flex-direction: column;
-        width: 100%;
-        background-color: #ffffff; /* Warna background menu */
-        padding: 10px;
-        border-radius: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-
-    ul.menu-horizontal li {
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        font-size: 18px;
-        cursor: pointer;
-        margin-left: auto;
-        color: #000;
-    }
-
-    /* Tampilkan menu saat dropdown aktif */
-    .navbar.active ul.menu-horizontal {
-        display: flex;
-    }
 }
