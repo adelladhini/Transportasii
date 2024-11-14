@@ -798,6 +798,15 @@ h2 {
         margin: 0 auto;
         padding: 0 px;
     }
+
+    .main-container {
+        width: 85%; /* Sama seperti navbar agar terlihat konsisten */
+        max-width: 1000px; /* Mengatur lebar maksimum */
+        margin: 0 auto; /* Mengatur agar konten tetap terpusat */
+        padding: 30px;
+        align-items: center;
+    }
+    
     
     .header-img {
         width: 100vw; /* Lebar penuh layar */
@@ -815,6 +824,22 @@ h2 {
     .navbar {
         flex-direction: column; /* Ubah navbar ke arah vertikal */
         align-items: flex-start;
+    }
+
+    .navbar {
+        display: flex;
+        background-color: #fff; /* Menggunakan warna putih sebagai latar belakang */
+        padding: 15px 30px; /* Padding bisa disesuaikan */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 85%; /* Memastikan navbar tidak melebihi 90% lebar kontainer */
+        max-width: 800px; /* Lebar maksimum */
+        margin: 0px auto; /* Margin atas dan bawah 20px, otomatis di kiri dan kanan */
+        border-radius: 40px; /* Sudut melengkung */
+        position: absolute; /* Menempatkan navbar di atas header */
+        top: 20px; /* Atur jarak dari bagian atas halaman */
+        left: 50%; /* Untuk memposisikan di tengah */
+        transform: translateX(-50%); /* Agar benar-benar di tengah secara horizontal */
+        z-index: 2; /* Pastikan navbar berada di atas elemen lain */
     }
 
     ul.menu-horizontal {
@@ -931,7 +956,7 @@ h2 {
     align-items: flex-start; /* Ratakan konten ke kiri */
     margin: 0; /* Hilangkan margin tambahan */
     padding: 0; /* Pastikan tidak ada padding */
-    margin-left: 10px; /* Atur jarak sesuai kebutuhan */
+    margin-left: 5px; /* Atur jarak sesuai kebutuhan */
     margin-top: 0px;
 }
 
@@ -970,7 +995,7 @@ h2 {
 }
 
 .footer-partners {
-    margin: 10px;
+    margin: 0 5px 0 5px; /* Kurangi margin kiri dan kanan */
     margin-top: 0px;
 }
 
