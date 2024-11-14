@@ -800,8 +800,8 @@ h2 {
     }
 
     .main-container {
-        width: 85%; /* Sama seperti navbar agar terlihat konsisten */
-        max-width: 1000px; /* Mengatur lebar maksimum */
+        width: 100%; /* Sama seperti navbar agar terlihat konsisten */
+        max-width: 300px; /* Mengatur lebar maksimum */
         margin: 0 auto; /* Mengatur agar konten tetap terpusat */
         padding: 30px;
         align-items: center;
@@ -810,7 +810,7 @@ h2 {
     
     .header-img {
         width: 100vw; /* Lebar penuh layar */
-        height: 350px;
+        height: 200px;
         background-color: lightgray; /* Warna latar sementara */
         background-image: url('asset/images/backgroundd.jpg'); /* Gambar latar */
         background-size: cover; /* Menutupi seluruh area */
@@ -829,17 +829,24 @@ h2 {
     .navbar {
         display: flex;
         background-color: #fff; /* Menggunakan warna putih sebagai latar belakang */
-        padding: 15px 30px; /* Padding bisa disesuaikan */
+        padding: 0px 30px; /* Padding bisa disesuaikan */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        width: 85%; /* Memastikan navbar tidak melebihi 90% lebar kontainer */
+        width: 80%; /* Memastikan navbar tidak melebihi 90% lebar kontainer */
         max-width: 800px; /* Lebar maksimum */
-        margin: 0px auto; /* Margin atas dan bawah 20px, otomatis di kiri dan kanan */
+        margin: 0px 0px auto; /* Margin atas dan bawah 20px, otomatis di kiri dan kanan */
         border-radius: 40px; /* Sudut melengkung */
         position: absolute; /* Menempatkan navbar di atas header */
         top: 20px; /* Atur jarak dari bagian atas halaman */
         left: 50%; /* Untuk memposisikan di tengah */
         transform: translateX(-50%); /* Agar benar-benar di tengah secara horizontal */
         z-index: 2; /* Pastikan navbar berada di atas elemen lain */
+    }
+
+    .no-header .navbar {
+        position: relative; /* Navbar akan mengikuti aliran normal dokumen */
+        transform: none;
+        margin: 20px 10px 0px 10px; 
+
     }
 
     ul.menu-horizontal {
@@ -870,22 +877,210 @@ h2 {
     .navbar.active ul.menu-horizontal {
         display: flex;
     }
+    
+    .logo img {
+        width:30px;
+        margin : 5px 5px 5px 0px;
+    }
+    
+    .logo span {
+        font-weight: bold;
+        width: 150px;
+        color: black;
+        font-size: 9px;
+        line-height: 1.2;
+    }
+
 }
 
 /* Responsive styling untuk tampilan mobile */
 @media (max-width: 480px) {
+
+/* transportasi */
+
+.transport-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.transport-item { 
+    width: 120px;
+    height: 120px;
+    background-color: #e6f0f4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Menambahkan ini untuk memusatkan konten secara vertikal */
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s; /* Animasi saat hover */
+}
+
+.link-box {
+    display: block; /* Membuat link mengambil seluruh kotak */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #333; /* Warna teks */
+}
+
+.link-box img {
+    width: 100%; /* Gambar akan mengisi seluruh lebar kotak */
+}
+
+.link-box p {
+    padding: 8px; /* Ruang di dalam kotak teks */
+    margin: 0; /* Menghilangkan margin default pada p */
+}
+
+.link-box:hover {
+    transform: scale(1.00); /* Efek zoom saat hover */
+    background-color: #e6f0f4; /* Warna latar belakang saat hover */
+}
+
+.transport-item img {
+    width: 90%; /* Sesuaikan agar gambar tidak terlalu besar */
+    height: auto;
+    max-height: 160px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.transport-item p {
+    margin: 0; /* Atur margin agar benar-benar ditengah */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Dropdown styles */
+.dropdown-container { 
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.dropdown-header {
+    background-color: #e6f0f4;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Menyusun elemen dalam kolom */
+    align-items: flex-start; /* Mengatur elemen ke kiri */
+    gap: 5px; /* Memberikan jarak antara icon-title dan p */
+}
+
+.icon-title {
+    display: flex;
+    align-items: center; /* Menyelaraskan img dan h1 secara vertikal */
+    gap: 10px; /* Jarak antara img dan h1 */
+}
+
+.header-icon {
+    width: 30px; /* Ukuran gambar */
+    height: 30px;
+}
+
+.dropdown-header h1 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    margin-top: -32px;
+    margin-left: 40px; /* Atur jarak sesuai kebutuhan */
+}
+
+.dropdown-header p {
+    margin: 0; /* Menyusun p tepat di bawah icon-title */
+    font-size: 12px;
+    color: #555;
+    text-align: left;
+    margin-left: 40px; /* Atur jarak sesuai kebutuhan */
+}
+
+.dropdown-content {
+    display: none; /* Awalnya tersembunyi */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #E2EEF4;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: left; /* Mengatur teks di sebelah kiri */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Membuat elemen di dalam .card berjejer secara horizontal */
+    flex-direction: row; /* Mengatur agar konten berjejer dalam baris (gambar di samping teks) */
+    align-items: center; /* Menyejajarkan elemen secara vertikal di tengah */
+    gap: 15px; /* Memberi jarak antara gambar dan teks */
+    position: relative; /* Mengatur posisi relatif untuk kontainer .card */
+}
+
+.card img {
+    width: auto; /* Mengatur lebar gambar secara otomatis */
+    height: 80px; /* Menentukan tinggi gambar agar tidak terlalu besar */
+    border-radius: 5px;
+    margin-bottom: 0; /* Hilangkan margin bawah karena gambar di samping teks */
+    margin-top: 30px;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    position: absolute; /* Mengatur posisi absolut untuk teks agar berada di atas gambar */
+    top: 10px; /* Mengatur teks agar berada di bagian atas gambar */
+    left: 40%;
+    transform: translateX(-40%); /* Memusatkan teks di tengah secara horizontal */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.card p {
+    font-size: 10px;
+    color: #555;
+    line-height: 1.4;
+    margin-top: 35px; /* Menambahkan jarak antara h3 dan p */
+    text-align: justify;
+}
+
+
     table {
         width: 100%;
-        font-size: 12px; /* Sesuaikan ukuran font agar lebih kecil */
+        font-size: 10px; /* Sesuaikan ukuran font agar lebih kecil */
     }
 
     table th, table td {
-        padding: 10px; /* Kurangi padding untuk sel pada tampilan mobile */
+        padding: 5px; /* Kurangi padding untuk sel pada tampilan mobile */
     }
 
     /* Atur ulang tampilan tabel agar lebih sederhana */
     .trf {
         white-space: normal; /* Membuat teks tidak terpotong pada tampilan kecil */
+    }
+
+    .note {
+        font-size: 10px;
+        color: #555;
     }
 }
 
@@ -922,11 +1117,126 @@ h2 {
     }
 
     .text p {
-        font-size: 14px;
+        font-size: 12px;
         max-width: 100%;
         padding: 0 20px;
     }
+    
+    .text a {
+        color: #007bff;
+    }
+    
+    .text a:hover {
+        text-decoration: underline;
+    }
+    
+    h2 {
+        margin-top: 10px;
+        margin-left: 40px; /* Atur sesuai jarak yang diinginkan */
+        font-size: 14px;
+    }
+    
+    .layanan-text {
+        margin-top: 10px;
+        margin-left: 40px; /* Atur jarak sesuai kebutuhan */
+    }
+
+    
+.route-list {
+    list-style: none;
+    margin: 10px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membagi menjadi 2 kolom */
+    list-style: none; /* Menghilangkan bullet pada list */
+    padding: 0; /* Menghilangkan padding default */
+    padding:0;
 }
+
+.route-list li {
+    list-style:none;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 11px;
+    color: #333;
+    margin-left: 40px; /* Atur jarak sesuai kebutuhan */
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    flex-shrink: 0; /* Lingkaran tidak mengecil meski ada teks panjang */
+    font-size: 12px; /* Buat ukuran font lebih kecil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk tampilan lebih elegan */
+    text-align: center; /* Pastikan teks dalam satu baris */
+    line-height: 1; /* Atur tinggi baris untuk menjaga proporsi teks */
+}
+
+.route-text {
+    color: black;
+    text-decoration: none;
+    white-space: nowrap; /* Mencegah teks pecah menjadi baris baru jika terlalu panjang */
+}
+
+.route-list a {
+    text-decoration: none;
+    color: inherit; /* Mengambil warna teks dari elemen induk */
+    display: inline-flex; /* Inline fleksibel agar tetap fleksibel */
+    align-items: center; /* Membuat teks tetap sejajar */
+}
+
+.circle-cb {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #00A3E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .circle-bk {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #046C37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }  
+
+  .circle-kai {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #92DBF5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+    }
 
 
 /* Responsive styling untuk tampilan mobile */
