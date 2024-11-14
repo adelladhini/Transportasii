@@ -906,27 +906,26 @@ h2 {
 
 /* Responsive styling untuk tampilan mobile */
 @media (max-width: 480px) {
-
+    
     .footer {
         background-color: #ffffff;
-        padding: 0; /* Sesuaikan padding sesuai kebutuhan */
+        padding: 0;
         color: #333;
-        width: 100%;
+        width: 100vw; /* Lebar penuh viewport */
         border-top: 1px solid #ddd;
         margin: 0;
-        flex-shrink: 0; /* Jangan biarkan footer mengecil */
+        flex-shrink: 0;
     }
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar */
-    gap : -10px;
-}
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100vw; /* Lebar penuh viewport */
+        padding: 0;
+        box-sizing: border-box;
+    }
 
 .footer-kiri {
     align-items: flex-start; /* Ratakan konten ke kiri */
