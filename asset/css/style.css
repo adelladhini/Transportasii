@@ -810,7 +810,7 @@ h2 {
     
     .header-img {
         width: 100vw; /* Lebar penuh layar */
-        height: 300px;
+        height: 350px;
         background-color: lightgray; /* Warna latar sementara */
         background-image: url('asset/images/backgroundd.jpg'); /* Gambar latar */
         background-size: cover; /* Menutupi seluruh area */
