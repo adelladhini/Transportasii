@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Menjamin halaman setinggi layar */
+    min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
     padding: 0;
@@ -17,9 +17,9 @@ body {
 }
 
 .header-img {
-    width: 100vw; /* Lebar penuh layar */
+    width: 100vw;
     height: 300px;
-    background-color: lightgray; /* Warna latar sementara */
+    background-color: lightgray;
     background-image: url('asset/images/backgroundd.jpg'); /* Gambar latar */
     background-size: cover; /* Menutupi seluruh area */
     background-position: center; /* Posisi tengah gambar */
@@ -759,11 +759,11 @@ h2 {
 
 .no-underline {
     text-decoration: none;
-    color: inherit; /* Agar warna teks sesuai dengan teks di sekitarnya */
+    color: inherit; 
 }
 
 .no-underline:hover {
-    text-decoration: underline; /* Tambahkan ini jika ingin garis bawah saat hover */
+    text-decoration: underline; 
 }
 
 .social-icons a {
@@ -785,9 +785,11 @@ h2 {
     text-align: center;
     font-weight: bold;
     width: 100%;
-    margin-top: auto; /* Memastikan footer selalu di bawah */
+    margin-top: auto; 
     position: relative;
 }
+
+
 
 
 
@@ -1248,6 +1250,7 @@ h2 {
         width: 100vw; /* Lebar penuh viewport */
         padding: 0;
         box-sizing: border-box;
+        gap: 0px;
     }
 
 .footer-kiri {
@@ -1287,13 +1290,13 @@ h2 {
 }
 
 .footer-alamat p {
-    font-size: 6px;
+    font-size: 5px;
     color: #333;
     margin-top: 0px;
 }
 
 .footer-partners {
-    margin: 0 5px 0 5px; /* Kurangi margin kiri dan kanan */
+    margin: 0px 50px 0 10px; /* Kurangi margin kiri dan kanan */
     margin-top: 0px;
 }
 
@@ -1328,8 +1331,8 @@ h2 {
 }
 
 .footer-contact {
-    margin: 0px;
-    margin-right: 30px; /* Atur jarak sesuai kebutuhan */
+    margin: 0px 50px 0px 5px; /* Kurangi margin kiri dan kanan */
+    margin-top: 0px;
 }
 
 .footer-contact h4 {
@@ -1387,7 +1390,7 @@ h2 {
 .footer-copyright {
     background-color: #fde6f0;
     padding: 1px 0;
-    font-size: 6px;
+    font-size: 5px;
     color: #F066B9;
     text-align: center;
     font-weight: bold;
