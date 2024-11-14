@@ -792,7 +792,7 @@ h2 {
 
 
 /* Tambahkan media query untuk tampilan mobile */
-@media (max-width: 480px) {
+@media (max-width: 780px) {
     .container{
         width: 100%;
         margin: 0 auto;
@@ -891,13 +891,8 @@ h2 {
         line-height: 1.2;
     }
 
-}
-
-/* Responsive styling untuk tampilan mobile */
-@media (max-width: 480px) {
 
 /* transportasi */
-
 .transport-container {
     display: flex;
     gap: 16px;
@@ -1082,11 +1077,8 @@ h2 {
         font-size: 10px;
         color: #555;
     }
-}
 
 
-/* Responsive styling untuk mobile */
-@media (max-width: 480px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -1236,11 +1228,7 @@ h2 {
     margin-right: 10px;
     flex-shrink: 0;
   }
-    }
-
-
-/* Responsive styling untuk tampilan mobile */
-@media (max-width: 480px) {
+    
     
     .footer {
         background-color: #ffffff;
