@@ -1269,18 +1269,19 @@ h2 {
 }
 
 .footer-logo img {
-    width:25px;
+    width:20px;
     margin-right: 10px;
-    padding-top:10px;
-    size: 20px;
+    padding-top:8px;
+    size: 15px;
 }
 
 .footer-logo span {
     font-weight: bold;
-    width: 80px;
+    width: 90px;
     color: black;
-    font-size: 7px;
+    font-size: 6px;
     line-height: 1.2;
+    padding-top:8px;
 }
 
 .footer-alamat {
@@ -1309,12 +1310,12 @@ h2 {
 }
 
 .partner-logos img {
-    width: 20px;
+    width: 15px;
     height: auto;
 }
 
 .footer-partners h4 {
-    font-size: 8px;
+    font-size: 6px;
     color: #333;
     font-weight: bold;
     text-align: center;
@@ -1336,7 +1337,7 @@ h2 {
 }
 
 .footer-contact h4 {
-    font-size: 9px;
+    font-size: 6px;
     color: #333;
     font-weight: bold;
     
