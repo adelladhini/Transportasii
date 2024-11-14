@@ -792,7 +792,7 @@ h2 {
 
 
 /* Tambahkan media query untuk tampilan mobile */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .container{
         width: 100%;
         margin: 0 auto;
@@ -848,7 +848,7 @@ h2 {
 }
 
 /* Responsive styling untuk tampilan mobile */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     table {
         width: 100%;
         font-size: 12px; /* Sesuaikan ukuran font agar lebih kecil */
@@ -866,7 +866,7 @@ h2 {
 
 
 /* Responsive styling untuk mobile */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .content {
         flex-direction: column;
         align-items: center;
@@ -905,7 +905,7 @@ h2 {
 
 
 /* Responsive styling untuk tampilan mobile */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
 
     .footer {
         background-color: #ffffff;
