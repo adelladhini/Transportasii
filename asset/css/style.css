@@ -1251,6 +1251,7 @@ h2 {
         padding: 0;
         box-sizing: border-box;
         gap: 0px;
+        margin : 0px 0px 0px 0px
     }
 
 .footer-kiri {
@@ -1399,4 +1400,4 @@ h2 {
     margin-top: auto; /* Memastikan footer selalu di bawah */
     position: relative;
 }
-}
+} 
